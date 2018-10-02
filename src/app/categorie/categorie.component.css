@@ -1,0 +1,51 @@
+.wrap{
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+
+.abdo{
+background: red;
+width: 100%;
+height: 40vh;
+text-align: center;
+line-height: 40vh;
+
+}
+
+.cardio{
+background: green;
+width: 100%;
+height: 40vh;
+text-align: center;
+line-height: 40vh;
+background-image: url(../../assets/rawpixel-570905-unsplash.jpg);
+background-position: 50% 50%;
+background-size: cover;
+
+}
+
+
+.fessier{
+background: blue;
+width: 100%;
+height: 40vh;
+text-align: center;
+line-height: 40vh;
+}
+
+.allVideo{
+background: pink;
+width: 100%;
+height: 40vh;
+text-align: center;
+line-height: 40vh;
+background-image: url(../../assets/bruce-mars-554379-unsplash.jpg);
+background-position: 50% 20%;
+background-size: cover;
+}
+
+img{
+  width: 23vh;
+margin-left: 10vh;
+}

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+*{
+    margin: 0px;
+    padding: 0px
+}
+
+
+
+.wrap{
+    background-image: url(../../assets/home-copy-1.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.block{
+      padding-top: 10vh;
+}
+
+.text{
+  text-align: center;
+}
+
+h1{
+
+  font-size: 2.7em;
+  color: #ed1801;
+  margin-bottom: 5vh;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+}
+
+p{
+  font-size: 1.5em;
+  color: white;
+  line-height: 5vh;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+
+}
+
+img{
+  width: 23vh;
+margin-left: 10vh;
+}
+
+.btnHome{
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+}
+
+.btn1{
+    background: #ed1801;
+}
+
+button{
+    margin: 2vh;
+    border-radius: 15px;
+    border: none;
+    height: 5vh;
+    width: 27vh;
+}
