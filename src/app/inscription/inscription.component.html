@@ -7,18 +7,18 @@
 <h1>Inscription</h1>
   <label>
     <input type="text" placeholder = "Prenom" formControlName="firstName">
-      <div class="msg">  <p-message severity="error"  text="Field is required" *ngIf="!inscForm.controls['firstName'].valid&&inscForm.controls['firstName'].dirty"></p-message> </div>
+      <!-- <div class="msg">  <p-message severity="error"  text="Field is required" *ngIf="!inscForm.controls['firstName'].valid&&inscForm.controls['firstName'].dirty"></p-message> </div> -->
   </label>
 
   <label>
     <input type="text" placeholder = "Nom" formControlName="lastName" required>
-    <div class="msg">  <p-message severity="error"  text="Field is required" *ngIf="!inscForm.controls['lastName'].valid&&inscForm.controls['lastName'].dirty"></p-message> </div>
+    <!-- <div class="msg">  <p-message severity="error"  text="Field is required" *ngIf="!inscForm.controls['lastName'].valid&&inscForm.controls['lastName'].dirty"></p-message> </div> -->
 
   </label>
 
   <label>
     <input type="email" placeholder = "Email"  formControlName="email" required>
-      <div class="msg">  <p-message severity="error"  text="Exemple@exemple.fr" *ngIf="!inscForm.controls['email'].valid&&inscForm.controls['email'].dirty"></p-message> </div>
+      <!-- <div class="msg">  <p-message severity="error"  text="Exemple@exemple.fr" *ngIf="!inscForm.controls['email'].valid&&inscForm.controls['email'].dirty"></p-message> </div> -->
   </label>
 
 <div class="password" formGroupName="passwords">
@@ -43,5 +43,7 @@
 <button  style="margin-top: 15px" type="submit" [disabled]="!inscForm.valid" routerLink="/categorie"  >Valider</button>
 
 </div>
+
+<footer>©2018 Nawal Benahmida</footer>
 
 </form>

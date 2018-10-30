@@ -8,20 +8,17 @@
   <h1>Connexion</h1>
   <label class="email">
     <input type="email" placeholder = "Email"  formControlName="email">
-    <div class="msg">  <p-message severity="error"  text="Exemple@exemple.fr" *ngIf="!connecForm.controls['email'].valid&&connecForm.controls['email'].dirty"></p-message> </div>
+
   </label>
 
   <label class="pass">
     <input type="password" placeholder = "Mot de passe" formControlName="password" required>
-  <div class="msg">  <p-message severity="error"  text="Field is required" *ngIf="!connecForm.controls['password'].valid&&connecForm.controls['password'].dirty"></p-message> </div>
+
   </label>
 
   <button type="submit" [disabled]="!connecForm.valid" routerLink="/categorie">Valider</button>
-  <h4> Pas encore inscrit ? <a routerLink="/register">Créez un compte ici</a> </h4>
+  <h4> Pas encore inscrit ? <a routerLink="/inscription">Créez un compte ici</a> </h4>
 </div>
 
-
-
-
-
+<footer>©2018 Nawal Benahmida</footer>
 </form>

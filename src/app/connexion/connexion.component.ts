@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {  FormGroup , Validators, FormBuilder, FormControl } from '@angular/forms';
-import {Message} from 'primeng/components/common/api';
+// import {Message} from 'primeng/components/common/api';
 
 @Component({
   selector: 'app-connexion',
@@ -9,7 +9,7 @@ import {Message} from 'primeng/components/common/api';
 })
 export class ConnexionComponent implements OnInit {
   connecForm: FormGroup;
-   msgs: Message[] = [];
+
 
 
   constructor(private fb: FormBuilder) { }
@@ -25,10 +25,7 @@ export class ConnexionComponent implements OnInit {
     });
   }
 
-  showError() {
-         this.msgs = [];
-         this.msgs.push({severity:'error', summary:'Error Message', detail:'Validation failed'});
-     }
+  
 
   onSubmit() {
 console.warn(this.connecForm.value);

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {  Validators, FormBuilder, FormGroup, AbstractControl,  FormControl } from '@angular/forms';
-import {Message} from 'primeng/components/common/api';
+// import {Message} from 'primeng/components/common/api';
 
 @Component({
   selector: 'app-inscription',
@@ -10,7 +10,7 @@ import {Message} from 'primeng/components/common/api';
 export class InscriptionComponent implements OnInit {
   inscForm: FormGroup;
 passwords: FormGroup;
- msgs: Message[] = [];
+ // msgs: Message[] = [];
 
   constructor(private fb: FormBuilder) { }
 

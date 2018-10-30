@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 *{
     margin: 0px;
     padding: 0px
@@ -80,10 +81,12 @@ span{
 }
 
 footer{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9em;
   background: rgba(237, 24, 1, 0.8);
 height: 8vh;
 font-weight: bold;
 text-align: center;
 line-height: 9vh;
-margin-top: 17.5vh;
+margin-top: 14vh;
 }
