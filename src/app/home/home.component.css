@@ -8,15 +8,13 @@
 
 .wrap{
     background-image: url(../../assets/home-copy-1.jpg);
-    height: 100vh;
+    height: auto;
     background-size: cover;
     background-repeat: no-repeat;
 
 }
 
-.block{
-      padding-top: 10vh;
-}
+
 
 .text{
   text-align: center;
@@ -32,9 +30,9 @@ h1{
 }
 
 p{
-  font-size: 1.5em;
+  font-size: 1.6em;
   color: white;
-  line-height: 5vh;
+  line-height: 7vh;
   font-weight: bold;
   font-family: 'Lato', sans-serif;
 
@@ -60,6 +58,10 @@ a{
     font-family: 'Lato', sans-serif;
 }
 
+a:hover{
+  color: black;
+}
+
 .btn1{
     background: #ed1801;
 }
@@ -70,4 +72,18 @@ button{
     border: none;
     height: 5vh;
     width: 27vh;
+}
+
+span{
+  color: #ed1801;
+  font-weight: bold;
+}
+
+footer{
+  background: rgba(237, 24, 1, 0.8);
+height: 8vh;
+font-weight: bold;
+text-align: center;
+line-height: 9vh;
+margin-top: 17.5vh;
 }
