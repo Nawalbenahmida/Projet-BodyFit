@@ -17,7 +17,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { CategorieComponent } from './categorie/categorie.component';
-import { VideoComponent } from './video/video.component';
+import { CardioComponent } from './cardio/cardio.component';
+import { FessierComponent } from './fessier/fessier.component';
+import { AllVComponent } from './all-v/all-v.component';
+import { AbdoComponent } from './abdo/abdo.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { VideoComponent } from './video/video.component';
     ConnexionComponent,
     InscriptionComponent,
     CategorieComponent,
-    VideoComponent
+    CardioComponent,
+    FessierComponent,
+    AllVComponent,
+    AbdoComponent,
+    
   ],
   imports: [
     BrowserModule,

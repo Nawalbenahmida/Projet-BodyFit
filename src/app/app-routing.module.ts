@@ -5,14 +5,22 @@ import { HomeComponent } from './home/home.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import {  CategorieComponent } from './categorie/categorie.component';
-import { VideoComponent } from './video/video.component';
+import { AbdoComponent } from './abdo/abdo.component';
+import { CardioComponent } from './cardio/cardio.component';
+import { AllVComponent } from './all-v/all-v.component';
+import { FessierComponent } from './fessier/fessier.component';
+
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path:'connexion', component: ConnexionComponent},
   {path:'inscription', component: InscriptionComponent},
   {path:'categorie', component: CategorieComponent},
-  {path:'video/:categorie', component: VideoComponent},
+  {path: 'video/abdo', component: AbdoComponent},
+  {path: 'video/cardio', component: CardioComponent},
+  {path: 'video/allVideo', component: AllVComponent},
+  {path: 'video/fessier', component: FessierComponent},
+
 
 ];
 
