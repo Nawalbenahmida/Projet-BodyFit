@@ -1,14 +1,14 @@
 
-<!-- <nav>
-      <img src="../../assets/Logo1.png" alt="">
-  <button type="button" name="button">Deconnexion</button>
-</nav> -->
+<nav >
+  <img src="../../assets/Logo1.png" alt="">
+  <i mat-button [matMenuTriggerFor]="menu" class="fa fa-bars"></i></nav>
+<mat-menu #menu="matMenu">
+  <li mat-menu-item>Déconnexion</li>
+</mat-menu>
 
 <div class="wrap">
 
 <div class="{{info.class}}" *ngFor="let info of infoCategorie">
-
-
 
 <button  routerLink="{{info.routing}}" >{{info.name}}</button>
 
