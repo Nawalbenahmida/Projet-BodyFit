@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TypeVideo } from '../interface/type-video';
+import { InfoVideoService } from '../services/info-video.service';
 
 @Component({
   selector: 'app-cardio',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cardio.component.css']
 })
 export class CardioComponent implements OnInit {
+typeCardio: TypeVideo[]
+  constructor(private typevideoService:  InfoVideoService) { }
 
-  constructor() { }
-
+getCardio(){
+    this.typevideoService.getCardio().subscribe((typeCardio: TypeVideo[]) => this.typeCardio = typeCardio);
+}
   ngOnInit() {
+    this.getCardio();
   }
 
 }

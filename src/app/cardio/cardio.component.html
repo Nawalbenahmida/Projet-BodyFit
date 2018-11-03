@@ -1,3 +1,26 @@
-<p>
-  cardio works!
-</p>
+<div class="centre">
+  <nav >
+    <img src="../../assets/Logo1.png" alt="">
+    <i mat-button [matMenuTriggerFor]="menu" class="fa fa-bars"></i></nav>
+  <mat-menu #menu="matMenu">
+    <li mat-menu-item routerLink="/categorie" >Categorie</li>
+    <li mat-menu-item routerLink="" >Déconnexion</li>
+  </mat-menu>
+
+<div class="block">
+
+
+
+  <div class="{{type.block}}" *ngFor="let type of typeCardio">
+
+<div class="{{type.class}}">
+<a href="{{type.video}}"> <i class="fa fa-play-circle"></i> </a>
+</div>
+
+<p>{{type.desc}}</p>
+
+</div>
+
+</div>
+<footer>©2018 Nawal Benahmida</footer>
+</div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TypeVideo } from '../interface/type-video';
+import { InfoVideoService } from '../services/info-video.service';
 
 @Component({
   selector: 'app-abdo',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./abdo.component.css']
 })
 export class AbdoComponent implements OnInit {
-
-  constructor() { }
+ typeAbdo: TypeVideo[]
+  constructor(private typevideoService:  InfoVideoService) { }
+  getAbdo(){
+    this.typevideoService.getAbdo().subscribe((typeAbdo: TypeVideo[]) => this.typeAbdo = typeAbdo );
+  }
 
   ngOnInit() {
+   this.getAbdo();
   }
 
 }
