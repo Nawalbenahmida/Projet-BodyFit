@@ -6,41 +6,27 @@
   <div class="block">
 <h1>Inscription</h1>
   <label>
-    <input type="text" placeholder = "Prenom" formControlName="firstName">
-      <!-- <div class="msg">  <p-message severity="error"  text="Field is required" *ngIf="!inscForm.controls['firstName'].valid&&inscForm.controls['firstName'].dirty"></p-message> </div> -->
+    <input type="text" placeholder = "Prenom" [(ngModel)]="firstName" formControlName="firstName">
   </label>
 
   <label>
     <input type="text" placeholder = "Nom" formControlName="lastName" required>
-    <!-- <div class="msg">  <p-message severity="error"  text="Field is required" *ngIf="!inscForm.controls['lastName'].valid&&inscForm.controls['lastName'].dirty"></p-message> </div> -->
-
   </label>
 
   <label>
-    <input type="email" placeholder = "Email"  formControlName="email" required>
-      <!-- <div class="msg">  <p-message severity="error"  text="Exemple@exemple.fr" *ngIf="!inscForm.controls['email'].valid&&inscForm.controls['email'].dirty"></p-message> </div> -->
+    <input type="email" id="email" [(ngModel)]="email" placeholder = "Email"  formControlName="email" required>
   </label>
 
-<div class="password" formGroupName="passwords">
+<div class="password" >
 
   <label>
-    <input  type="password" placeholder = "Mot de passe"  formControlName="password" required>
-    <div *ngIf="inscForm.get('password')?.touched && password.errors?.required">
-   </div>
-
+    <input  type="password" [(ngModel)]="password" placeholder = "Mot de passe"  formControlName="password" required>
   </label>
-
-  <!-- <label>
-    <input  type="password" placeholder = "Confirmation mot de passe" formControlName="confirmPassword" required>
-    <div *ngIf="inscForm.get('confirmPassword')?.touched && confirmPassword.errors?.required">
-    </div>
-  </label> -->
-
 
 </div>
 
 
-<button  style="margin-top: 15px" type="submit" [disabled]="!inscForm.valid" routerLink="/categorie"  >Valider</button>
+<button  style="margin-top: 15px" type="submit" (click)="signup()" [disabled]="!email || !password " >Valider</button>
 
 </div>
 

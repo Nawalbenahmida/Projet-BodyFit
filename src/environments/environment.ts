@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyA8_OLaxMssGt1RSlOm2DieoCDVKvinlng",
+    authDomain: "bodyfitauth.firebaseapp.com",
+    databaseURL: "https://bodyfitauth.firebaseio.com",
+    projectId: "bodyfitauth",
+    storageBucket: "bodyfitauth.appspot.com",
+    messagingSenderId: "350278773538"
+  }
 };
 
 /*

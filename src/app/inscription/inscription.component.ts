@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {  Validators, FormBuilder, FormGroup, AbstractControl,  FormControl } from '@angular/forms';
-// import {Message} from 'primeng/components/common/api';
+import { Router } from '../../../node_modules/@angular/router';
+import { AuthService } from '../services/auth.service';
+
 
 @Component({
   selector: 'app-inscription',
@@ -9,10 +11,15 @@ import {  Validators, FormBuilder, FormGroup, AbstractControl,  FormControl } fr
 })
 export class InscriptionComponent implements OnInit {
   inscForm: FormGroup;
-passwords: FormGroup;
- // msgs: Message[] = [];
+  email: string;
+  firstName: string;
+ password: string;
+ errorMessage: string = 'ooopps';
 
-  constructor(private fb: FormBuilder) { }
+
+
+
+  constructor(private fb: FormBuilder, public authService: AuthService, private router: Router) { }
 
   ngOnInit() {
     this.inscForm = this.fb.group({
@@ -25,28 +32,29 @@ passwords: FormGroup;
       'email': new FormControl ('', Validators.compose(
         [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]
       )),
-      passwords: this.fb.group({
-                 'password': new FormControl ('', Validators.compose(
-                     [Validators.required]
-                   )) ,
-                 // 'confirmPassword': new FormControl ('', Validators.compose(
-                 //     [Validators.required]
-                 //   )) ,
-              }), //{validator: this.passwordConfirming}),
-    });
+      'password': new FormControl ('', Validators.compose(
+          [Validators.required, Validators.minLength(6),
+         Validators.maxLength(25)]
+        )) ,
+
+      });
+
   }
 
-
-//   passwordConfirming(c: AbstractControl): { invalid: boolean } {
-// if (c.get('password').value !== c.get('confirmPassword').value) {
-//  return {invalid: true};
-// }
-// }
-
+  signup() {
+    this.authService.signup(this.email, this.password);
+    this.email = this.password = '';
+    this.router.navigate(['/categorie']);
+    err => {
+      this.errorMessage = err.message;
+    }
+  }
 
 
 onSubmit() {
 console.warn(this.inscForm.value);
 }
+
+
 
 }
