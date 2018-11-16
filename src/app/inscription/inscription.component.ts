@@ -44,10 +44,6 @@ export class InscriptionComponent implements OnInit {
   signup() {
     this.authService.signup(this.email, this.password);
     this.email = this.password = '';
-    this.router.navigate(['/categorie']);
-    err => {
-      this.errorMessage = err.message;
-    }
   }
 
 

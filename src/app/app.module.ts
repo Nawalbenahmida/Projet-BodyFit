@@ -8,6 +8,7 @@ import {MatButtonModule, MatCheckboxModule, MatMenuModule} from '@angular/materi
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { MockCategorieService } from './services/mock-categorie.service';
 import { InfoVideoService } from './services/info-video.service';
@@ -23,9 +24,8 @@ import { FessierComponent } from './fessier/fessier.component';
 import { AllVComponent } from './all-v/all-v.component';
 import { AbdoComponent } from './abdo/abdo.component';
 import { AngularFireModule } from 'angularfire2';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthService } from './services/auth.service';
 
@@ -45,7 +45,6 @@ import { AuthService } from './services/auth.service';
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
     AngularFireAuthModule,
     BrowserModule,
     AppRoutingModule,
@@ -58,7 +57,8 @@ import { AuthService } from './services/auth.service';
     MatButtonModule,
     MatCheckboxModule,
     MatMenuModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [MockCategorieService , InfoVideoService, AuthGuard, AuthService ],
   bootstrap: [AppComponent]

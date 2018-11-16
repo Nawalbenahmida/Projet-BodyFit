@@ -2,10 +2,10 @@
     <img src="../../assets/Logo1.png" alt="">
 </div>
 
-<form [formGroup]="connecForm" (ngSubmit)="login()" >
+<form [formGroup]="connecForm"  >
 
-<div class="block">
-  <h1 >Welcome {{ (authService.user | async)?.email }}!</h1>
+<div class="block" >
+  <h1  >Welcome {{ (authService.user | async)?.email }}!</h1>
 
   <label class="email">
     <input type="email" [(ngModel)]="email" placeholder = "Email"  formControlName="email">
@@ -17,10 +17,11 @@
   </label>
 
 
- <!-- <div class="msg">  <p-message severity="error"  text="Exemple@exemple.fr" *ngIf="!authService.user['email']"></p-message> </div> -->
-<div class="msg">  <p-message severity="error"  text="Field is required" *ngIf="!authService.user "></p-message> </div>
 
-  <button type="submit"  (click)="login()" [disabled]="!connecForm.value">Valider</button>
+  <!-- <div class="msg">  <p-message severity="error"  text="Exemple@exemple.fr" *ngIf="!email.invalid && email.dirty "></p-message> </div> -->
+<!-- <div class="msg">  <p-message severity="error"  text="Field is required" *ngIf="!connecForm.controls['password'].valid&&connecForm.controls['password'].dirty"></p-message> </div> -->
+
+  <button type="submit" (click)="login()" [disabled]="!email || !password" >Valider</button>
   <h4> Pas encore inscrit ? <a routerLink="/inscription">Créez un compte ici</a> </h4>
 </div>
 

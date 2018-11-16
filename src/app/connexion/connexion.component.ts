@@ -17,7 +17,8 @@ export class ConnexionComponent implements OnInit {
   email: string;
   password: string;
   msgs: Message[] = [];
-  loginError: string;
+
+
 
 
 
@@ -41,21 +42,15 @@ export class ConnexionComponent implements OnInit {
   login() {
     this.authService.login(this.email, this.password);
     this.email = this.password = '';
-    this.router.navigate(['/categorie'])
-  
+  }
 
-
-
-}
 
 showError() {
          this.msgs = [];
          this.msgs.push({severity:'error', summary:'Error Message', detail:'Validation failed'});
      }
 
-onSubmit() {
-console.warn(this.connecForm.value);
-}
+
 
 
 
