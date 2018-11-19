@@ -101,6 +101,10 @@ button:active {
   box-shadow: none;
 }
 
+.msg {
+  margin: 1vh
+}
+
 footer{
   font-family: 'Montserrat', sans-serif;
   font-size: 0.9em;

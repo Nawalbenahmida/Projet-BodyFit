@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {  Validators, FormBuilder, FormGroup, AbstractControl,  FormControl } from '@angular/forms';
 import { Router } from '../../../node_modules/@angular/router';
 import { AuthService } from '../services/auth.service';
+import {Message} from 'primeng/components/common/api'
 
 
 @Component({
@@ -14,7 +15,7 @@ export class InscriptionComponent implements OnInit {
   email: string;
   firstName: string;
  password: string;
- errorMessage: string = 'ooopps';
+  msgs: Message[] = [];
 
 
 
@@ -45,6 +46,11 @@ export class InscriptionComponent implements OnInit {
     this.authService.signup(this.email, this.password);
     this.email = this.password = '';
   }
+
+  showError() {
+           this.msgs = [];
+           this.msgs.push({severity:'error', summary:'Error Message', detail:'Validation failed'});
+       }
 
 
 onSubmit() {

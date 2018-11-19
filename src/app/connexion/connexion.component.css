@@ -98,7 +98,7 @@ button {
   margin: auto;
   border: #ff0000;
   font-family: 'Lato', sans-serif;
-  margin-top: 10vh;
+  margin-top: 4vh;
 }
 button:active {
   top: 3px;
@@ -119,6 +119,10 @@ a{
 a:hover{
   color: white;
 
+}
+
+.msg {
+  margin: 1vh
 }
 
 footer{

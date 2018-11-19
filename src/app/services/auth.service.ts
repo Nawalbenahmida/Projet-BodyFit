@@ -42,10 +42,16 @@ signup(email: string, password: string) {
          });
      }
 
-     logout() {
+     logout(){
        this.firebaseAuth.auth.signOut();
-       this.router.navigate(['/'])
+       this.router.navigate(['/']);
+
      }
+
+     get authenticated(): boolean {
+  return this.firebaseAuth.authState !== null;
+}
+
 
 
 

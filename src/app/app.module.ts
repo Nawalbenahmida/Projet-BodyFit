@@ -24,7 +24,7 @@ import { FessierComponent } from './fessier/fessier.component';
 import { AllVComponent } from './all-v/all-v.component';
 import { AbdoComponent } from './abdo/abdo.component';
 import { AngularFireModule } from 'angularfire2';
-import { environment } from '../environments/environment';
+import { environment } from '../environments/environment.prod';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthService } from './services/auth.service';

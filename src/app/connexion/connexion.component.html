@@ -18,8 +18,9 @@
 
 
 
-  <!-- <div class="msg">  <p-message severity="error"  text="Exemple@exemple.fr" *ngIf="!email.invalid && email.dirty "></p-message> </div> -->
-<!-- <div class="msg">  <p-message severity="error"  text="Field is required" *ngIf="!connecForm.controls['password'].valid&&connecForm.controls['password'].dirty"></p-message> </div> -->
+  <div class="msg">  <p-message severity="error"  text="Veuillez respecter le format du courriel (exemple@domaine.fr)" *ngIf="!connecForm.controls['email'].valid&&connecForm.controls['email'].dirty"></p-message> </div>
+<div class="msg">  <p-message severity="error"  text="Mot de passe incorrect" *ngIf="!connecForm.controls['password'].valid&&connecForm.controls['password'].dirty"></p-message> </div>
+
 
   <button type="submit" (click)="login()" [disabled]="!email || !password" >Valider</button>
   <h4> Pas encore inscrit ? <a routerLink="/inscription">Créez un compte ici</a> </h4>

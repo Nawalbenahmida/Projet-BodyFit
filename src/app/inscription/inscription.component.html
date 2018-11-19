@@ -22,8 +22,10 @@
   <label>
     <input  type="password" [(ngModel)]="password" placeholder = "Mot de passe"  formControlName="password" required>
   </label>
-
 </div>
+
+<div class="msg">  <p-message severity="error"  text="Veuillez respecter le format du courriel (exemple@domaine.fr)" *ngIf="!inscForm.controls['email'].valid&&inscForm.controls['email'].dirty"></p-message> </div>
+<div class="msg">  <p-message severity="error"  text="Mot de passe incorrect" *ngIf="!inscForm.controls['password'].valid&&inscForm.controls['password'].dirty"></p-message> </div>
 
 
 <button  style="margin-top: 15px" type="submit" (click)="signup()" [disabled]="!email || !password " >Valider</button>
