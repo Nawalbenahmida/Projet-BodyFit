@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 .block1 , .block2 , .block3, .block4, .block5{
-  height: 40vh;
+  height: 35vh;
   width: 45vh;
   background: rgba(192, 10 , 10, 1);
-  margin: 10vh;
+  margin: 8vh;
   border-radius: 2vh;
 }
 
@@ -16,6 +16,7 @@
   margin-left: 5vh;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 15vh;
   height: auto;
 
@@ -104,4 +105,71 @@ font-weight: bold;
 text-align: center;
 line-height: 9vh;
 
+}
+
+
+@media screen and (max-width: 720px)
+{
+
+  img{
+      width: 17vh;
+      height: 17vh;
+      z-index: 2;
+  }
+
+  i.fa.fa-bars{
+    font-size: 7vh;
+    margin-right: 5vh;
+    margin-top: 5vh;
+
+  }
+
+  .block{
+    margin-left: -1vh;
+  }
+
+  .block1 , .block2 , .block3, .block4, .block5{
+    height: 30vh;
+    width: 35vh;
+    background: rgba(192, 10 , 10, 1);
+    margin: 10vh;
+    border-radius: 2vh;
+  }
+
+  .img1, .img2, .img3, .img4, .img5{
+    width: 35vh;
+    height: 20vh;
+
+  }
+
+  i.fa.fa-play-circle{
+      font-size: 14vh;
+      margin-left: 12vh;
+      line-height: 20vh;
+      color:  rgba(235, 24, 1, 0.7);
+  }
+
+}
+
+@media screen and (max-width: 1280px) {
+  .block1 , .block2 , .block3, .block4, .block5{
+    height: 30vh;
+    width: 35vh;
+    background: rgba(192, 10 , 10, 1);
+    margin: 10vh;
+    border-radius: 2vh;
+  }
+
+  .img1, .img2, .img3, .img4, .img5{
+    width: 35vh;
+    height: 20vh;
+
+  }
+
+  i.fa.fa-play-circle{
+      font-size: 14vh;
+      margin-left: 12vh;
+      line-height: 20vh;
+      color:  rgba(235, 24, 1, 0.7);
+  }
 }

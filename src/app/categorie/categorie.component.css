@@ -48,6 +48,10 @@ background-position: 50% 20%;
 background-size: cover;
 }
 
+h1{
+  font-size: 1em
+}
+
 
 
 button{
@@ -71,7 +75,7 @@ button:hover{
 }
 
 i.fa.fa-bars{
-  font-size: 9vh;
+  font-size: 7.5vh;
   margin-right: 10vh;
   margin-top: 9vh;
   color: rgba(237, 24, 1, 1);
@@ -83,8 +87,8 @@ nav{
   height: 0;
 }
 img{
-    width: 23vh;
-    height: 23vh;
+    width: 18vh;
+    height: 18vh;
     z-index: 2;
 }
 
@@ -92,6 +96,7 @@ li.mat-menu-item{
   color: rgba(237, 24, 1, 1);
   font-size: 15px;
   font-weight: bold;
+  text-align: center;
 }
 
 li.mat-menu-item:hover{
@@ -107,4 +112,19 @@ font-weight: bold;
 text-align: center;
 line-height: 9vh;
 
+}
+
+@media screen and (max-width: 720px) {
+  i.fa.fa-bars{
+
+  margin-top: 5vh;
+    margin-right: 2vh;
+
+  }
+
+  img{
+      width: 15vh;
+      height: 15vh;
+      z-index: 2;
+  }
 }

@@ -8,7 +8,7 @@ form {
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
-  background: linear-gradient(55deg, #f80303, #1f1e1e);
+  background: linear-gradient(35deg, #f80303, #1f1e1e);
   background-size: 400% 400%;
 
   -webkit-animation: AnimationName 39s ease infinite;
@@ -113,5 +113,71 @@ height: 8vh;
 font-weight: bold;
 text-align: center;
 line-height: 9vh;
-margin-top: 9.8vh;
+margin-top: 15vh;
+}
+
+@media screen and (max-width: 720px)
+{
+    h1{
+      font-size: 5vh;
+    }
+
+    form{
+      width: 100%;
+      height: 100%;
+    }
+
+    input{
+      width: 35vh;
+    }
+
+    button{
+      width: 35vh
+    }
+
+    footer{
+      margin-top: 24.8vh;
+    }
+
+    img{
+      margin-left: 1vh;
+        width: 20vh;
+    }
+}
+
+@media screen and (max-width: 810px){
+  footer{
+    margin-top: 28vh;
+  }
+}
+
+@media screen and (max-width: 768px){
+  footer{
+    margin-top: 25.5vh;
+  }
+
+  img{
+      width: 20vh;
+  }
+
+  h1{
+    font-size: 6vh;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  footer{
+    margin-top: 24.3vh;
+  }
+
+  form{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 1600px){
+  footer{
+    margin-top: 16vh;
+  }
 }

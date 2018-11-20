@@ -33,7 +33,7 @@ h1{
 p{
   font-size: 1.6em;
   color: white;
-  line-height: 7vh;
+  line-height: 150%;
   font-weight: bold;
   font-family: 'Lato', sans-serif;
 
@@ -84,9 +84,35 @@ footer{
   font-family: 'Montserrat', sans-serif;
   font-size: 0.9em;
   background: rgba(237, 24, 1, 0.8);
-height: 8vh;
+height: 6vh;
 font-weight: bold;
 text-align: center;
-line-height: 9vh;
-margin-top: 14vh;
+line-height: 6vh;
+margin-top: 15.6%;
+}
+
+@media screen and (max-width: 400px)
+{
+  img{
+    width: 23vh;
+  margin-left: 1vh;
+  }
+
+  p{
+    font-size: 1.4em;
+
+
+  }
+}
+
+@media screen and (max-width: 1024px){
+  footer{
+    margin-top: 22vh
+  }
+}
+
+@media screen and (max-width: 1600px){
+  footer{
+    margin-top: 18vh;
+  }
 }
