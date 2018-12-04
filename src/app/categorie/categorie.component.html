@@ -3,8 +3,8 @@
   <img src="../../assets/Logo1.png" alt="">
   <i mat-button [matMenuTriggerFor]="menu" class="fa fa-bars"></i></nav>
 <mat-menu #menu="matMenu">
-  <h1 *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</h1>
-  <li mat-menu-item (click)="logout()" *ngIf="authService.user | async" >Déconnexion</li>
+  <!-- <h1 *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.name_user }}!</h1> -->
+  <li mat-menu-item routerLink="" >Déconnexion</li>
 </mat-menu>
 
 <div class="wrap">

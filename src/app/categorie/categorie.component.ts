@@ -20,8 +20,6 @@ export class CategorieComponent implements OnInit {
     this.getInfo();
   }
 
-  logout() {
-    this.authService.logout();
-  }
+
 
 }

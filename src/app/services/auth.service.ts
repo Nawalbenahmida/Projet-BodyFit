@@ -1,58 +1,38 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { AngularFireAuth } from 'angularfire2/auth';
-import * as firebase from 'firebase/app';
 import { Router } from '../../../node_modules/@angular/router';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
+import { User } from '../interface/user';
 
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/json',
+    'Authorization': 'my-auth-token'
+  })
+};
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-   user: Observable<firebase.User>;
+    inscUrl = 'http://localhost:8080/user';
+    connexUrl = 'http://localhost:8080/login';
 
-  constructor(private firebaseAuth: AngularFireAuth,  private router: Router) {
-  this.user = firebaseAuth.authState;
+
+  constructor( private router: Router, public http: HttpClient) {
 }
 
-signup(email: string, password: string) {
-       this.firebaseAuth
-         .auth
-         .createUserWithEmailAndPassword(email, password)
-         .then(value => {
-           console.log('Success!', value);
-              this.router.navigate(['/categorie'])
-         })
-         .catch(err => {
-           console.log('Something went wrong:',err.message);
-         });
+addUser(user: User): Observable<User> {
+      return this.http.post<User>(this.inscUrl, user, httpOptions)
      }
 
-     login(email: string, password: string) {
-       this.firebaseAuth
-         .auth
-         .signInWithEmailAndPassword(email, password)
-         .then(value => {
-           console.log('Nice, it worked!');
-           this.router.navigate(['/categorie'])
-
-         })
-         .catch(err => {
-           console.log('Something went wrong:',err.message);
-         });
+login(user: User): Observable<User> {
+       return this.http.post<User>(this.connexUrl, user, httpOptions)
      }
 
-     logout(){
-       this.firebaseAuth.auth.signOut();
-       this.router.navigate(['/']);
-
-     }
-
-     get authenticated(): boolean {
-  return this.firebaseAuth.authState !== null;
-}
-
-
+isLoggedIn(): boolean {
+   return false;
+ }
 
 
 

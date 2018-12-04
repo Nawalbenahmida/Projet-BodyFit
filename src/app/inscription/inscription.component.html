@@ -1,34 +1,34 @@
 <div class="logo">
     <img src="../../assets/Logo1.png" alt="">
 </div>
-<form [formGroup]="inscForm" (ngSubmit)="signup()" >
+<form [formGroup]="inscForm"  >
 
   <div class="block">
 <h1>Inscription</h1>
   <label>
-    <input type="text" placeholder = "Prenom" [(ngModel)]="firstName" formControlName="firstName">
+    <input type="text" placeholder = "Prenom" [(ngModel)]="user.name_user"  formControlName="name_user">
   </label>
 
   <label>
-    <input type="text" placeholder = "Nom" formControlName="lastName" required>
+    <input type="text" placeholder = "Nom" [(ngModel)]="user.firstName_user"  formControlName="firstName_user" required>
   </label>
 
   <label>
-    <input type="email" id="email" [(ngModel)]="email" placeholder = "Email"  formControlName="email" required>
+    <input type="email" id="email"  [(ngModel)]="user.mail_user" placeholder = "Email"  formControlName="mail_user" required>
   </label>
 
 <div class="password" >
 
   <label>
-    <input  type="password" [(ngModel)]="password" placeholder = "Mot de passe"  formControlName="password" required>
+    <input  type="password"  [(ngModel)]="user.password_user"  placeholder = "Mot de passe"  formControlName="password_user" required>
   </label>
 </div>
 
-<div class="msg">  <p-message severity="error"  text="Veuillez respecter le format du courriel (exemple@domaine.fr)" *ngIf="!inscForm.controls['email'].valid&&inscForm.controls['email'].dirty"></p-message> </div>
-<div class="msg">  <p-message severity="error"  text="Mot de passe incorrect" *ngIf="!inscForm.controls['password'].valid&&inscForm.controls['password'].dirty"></p-message> </div>
+<div class="msg">  <p-message severity="error"  text="Veuillez respecter le format du courriel (exemple@domaine.fr)" *ngIf="!inscForm.controls['mail_user'].valid&&inscForm.controls['mail_user'].dirty"></p-message> </div>
+<div class="msg">  <p-message severity="error"  text="Mot de passe incorrect" *ngIf="!inscForm.controls['password_user'].valid&&inscForm.controls['password_user'].dirty"></p-message> </div>
 
 
-<button  style="margin-top: 15px" type="submit" (click)="signup()" [disabled]="!email || !password " >Valider</button>
+<button  style="margin-top: 15px" type="submit" (click)="addUser(user)"  >Valider</button>
 
 </div>
 

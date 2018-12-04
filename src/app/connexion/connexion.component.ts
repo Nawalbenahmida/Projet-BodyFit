@@ -4,6 +4,7 @@ import {  FormGroup , Validators, FormBuilder, FormControl } from '@angular/form
 import { AuthService } from '../services/auth.service';
 import { Router} from '../../../node_modules/@angular/router';
 import {Message} from 'primeng/components/common/api'
+import { User } from '../interface/user';
 
 
 
@@ -17,6 +18,8 @@ export class ConnexionComponent implements OnInit {
   email: string;
   password: string;
   msgs: Message[] = [];
+
+    user: User =   {  name_user: '', firstName_user: '', mail_user:'',   password_user:''  };
 
 
 
@@ -39,9 +42,18 @@ export class ConnexionComponent implements OnInit {
     });
   }
 
-  login() {
-    this.authService.login(this.email, this.password);
-    this.email = this.password = '';
+ login(user: User): void {
+    console.log(user);
+   this.authService.login(user).subscribe(user => {
+     if(user){
+       alert("User created successfully.");
+       console.log(user);
+        this.router.navigate(['/categorie'])
+     }else{
+       alert("errer")
+     }
+     });
+
   }
 
 

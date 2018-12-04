@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {  Validators, FormBuilder, FormGroup, AbstractControl,  FormControl } from '@angular/forms';
 import { Router } from '../../../node_modules/@angular/router';
 import { AuthService } from '../services/auth.service';
-import {Message} from 'primeng/components/common/api'
+import {Message} from 'primeng/components/common/api';
+import { User } from '../interface/user';
+
 
 
 @Component({
@@ -12,10 +14,11 @@ import {Message} from 'primeng/components/common/api'
 })
 export class InscriptionComponent implements OnInit {
   inscForm: FormGroup;
-  email: string;
-  firstName: string;
- password: string;
   msgs: Message[] = [];
+
+
+  user: User =   {  name_user: '', firstName_user: '', mail_user:'',   password_user:''  };
+
 
 
 
@@ -24,16 +27,16 @@ export class InscriptionComponent implements OnInit {
 
   ngOnInit() {
     this.inscForm = this.fb.group({
-      'firstName': new FormControl ('', Validators.compose(
+      'name_user': new FormControl ('', Validators.compose(
           [Validators.required]
         )) ,
-      'lastName': new FormControl ('', Validators.compose(
+      'firstName_user': new FormControl ('', Validators.compose(
           [Validators.required]
         )) ,
-      'email': new FormControl ('', Validators.compose(
+      'mail_user': new FormControl ('', Validators.compose(
         [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]
       )),
-      'password': new FormControl ('', Validators.compose(
+      'password_user': new FormControl ('', Validators.compose(
           [Validators.required, Validators.minLength(6),
          Validators.maxLength(25)]
         )) ,
@@ -42,10 +45,14 @@ export class InscriptionComponent implements OnInit {
 
   }
 
-  signup() {
-    this.authService.signup(this.email, this.password);
-    this.email = this.password = '';
-  }
+
+    addUser(user: User): void {
+      this.authService.addUser(user).subscribe(user => {
+          alert("User created successfully.");
+          console.log(user);
+           this.router.navigate(['/categorie'])
+        });
+    }
 
   showError() {
            this.msgs = [];
