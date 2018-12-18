@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MockCategorieService  } from '../services/mock-categorie.service';
+import { CategorieService  } from '../services/categorie.service';
 import { TypeCategorie } from '../interface/type-categorie';
 import { AuthService } from '../services/auth.service';
 
@@ -11,9 +11,11 @@ import { AuthService } from '../services/auth.service';
 export class CategorieComponent implements OnInit {
   infoCategorie: TypeCategorie[]
 
-  constructor(private categorieService: MockCategorieService , public authService: AuthService ) { }
+  constructor(private categorieService: CategorieService , public authService: AuthService ) { }
   getInfo() {
-  this.categorieService.getInfo().subscribe((infoCategorie: TypeCategorie[]) => this.infoCategorie = infoCategorie);
+  this.categorieService.getInfo().subscribe(data => {
+        this.infoCategorie = data;
+      });
 }
 
   ngOnInit() {

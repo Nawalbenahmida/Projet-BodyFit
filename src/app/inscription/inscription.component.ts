@@ -17,7 +17,7 @@ export class InscriptionComponent implements OnInit {
   msgs: Message[] = [];
 
 
-  user: User =   {  name_user: '', firstName_user: '', mail_user:'',   password_user:''  };
+  user: User =   {  nameUser: '', firstNameUser: '', mailUser:'',   passwordUser:''  };
 
 
 
@@ -47,8 +47,9 @@ export class InscriptionComponent implements OnInit {
 
 
     addUser(user: User): void {
+      console.log(user);
       this.authService.addUser(user).subscribe(user => {
-          alert("User created successfully.");
+        window.alert("bienvenue");
           console.log(user);
            this.router.navigate(['/categorie'])
         });

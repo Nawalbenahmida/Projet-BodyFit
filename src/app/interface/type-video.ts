@@ -1,6 +1,7 @@
 export interface TypeVideo{
-  class: string;
-  block: string;
-  video: string;
-  desc: string;
+  idVideo: Number;
+  classVideo: string;
+  blockVideo: string;
+  linkVideo: string;
+  nameVideo: string;
 }

@@ -31,7 +31,7 @@ login(user: User): Observable<User> {
      }
 
 isLoggedIn(): boolean {
-   return false;
+   return true;
  }
 
 

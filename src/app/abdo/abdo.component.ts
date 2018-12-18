@@ -11,7 +11,9 @@ export class AbdoComponent implements OnInit {
  typeAbdo: TypeVideo[]
   constructor(private typevideoService:  InfoVideoService) { }
   getAbdo(){
-    this.typevideoService.getAbdo().subscribe((typeAbdo: TypeVideo[]) => this.typeAbdo = typeAbdo );
+    this.typevideoService.getAbdo().subscribe(data => {
+          this.typeAbdo = data;
+        });
   }
 
   ngOnInit() {

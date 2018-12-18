@@ -6,26 +6,26 @@
   <div class="block">
 <h1>Inscription</h1>
   <label>
-    <input type="text" placeholder = "Prenom" [(ngModel)]="user.name_user"  formControlName="name_user">
+    <input type="text" placeholder = "Prenom" [(ngModel)]="user.nameUser"  formControlName="name_user">
   </label>
 
   <label>
-    <input type="text" placeholder = "Nom" [(ngModel)]="user.firstName_user"  formControlName="firstName_user" required>
+    <input type="text" placeholder = "Nom" [(ngModel)]="user.firstNameUser"  formControlName="firstName_user" required>
   </label>
 
   <label>
-    <input type="email" id="email"  [(ngModel)]="user.mail_user" placeholder = "Email"  formControlName="mail_user" required>
+    <input type="email" id="email"  [(ngModel)]="user.mailUser" placeholder = "Email"  formControlName="mail_user" required>
   </label>
 
 <div class="password" >
 
   <label>
-    <input  type="password"  [(ngModel)]="user.password_user"  placeholder = "Mot de passe"  formControlName="password_user" required>
+    <input  type="password"  [(ngModel)]="user.passwordUser"  placeholder = "Mot de passe"  formControlName="password_user" required>
   </label>
 </div>
 
-<div class="msg">  <p-message severity="error"  text="Veuillez respecter le format du courriel (exemple@domaine.fr)" *ngIf="!inscForm.controls['mail_user'].valid&&inscForm.controls['mail_user'].dirty"></p-message> </div>
-<div class="msg">  <p-message severity="error"  text="Mot de passe incorrect" *ngIf="!inscForm.controls['password_user'].valid&&inscForm.controls['password_user'].dirty"></p-message> </div>
+<div class="msg">  <p-message severity="error"  text="Veuillez respecter le format du courriel (exemple@domaine.fr)" *ngIf="!inscForm.controls['mailUser'].valid&&inscForm.controls['mailUser'].dirty"></p-message> </div>
+<div class="msg">  <p-message severity="error"  text="Mot de passe incorrect" *ngIf="!inscForm.controls['passwordUser'].valid&&inscForm.controls['passwordUser'].dirty"></p-message> </div>
 
 
 <button  style="margin-top: 15px" type="submit" (click)="addUser(user)"  >Valider</button>

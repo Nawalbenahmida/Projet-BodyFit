@@ -19,7 +19,7 @@ export class ConnexionComponent implements OnInit {
   password: string;
   msgs: Message[] = [];
 
-    user: User =   {  name_user: '', firstName_user: '', mail_user:'',   password_user:''  };
+    user: User =   {  nameUser: '', firstNameUser: '', mailUser:'',   passwordUser:''  };
 
 
 
@@ -45,13 +45,11 @@ export class ConnexionComponent implements OnInit {
  login(user: User): void {
     console.log(user);
    this.authService.login(user).subscribe(user => {
-     if(user){
+       this.router.navigate(['/categorie'])
        alert("User created successfully.");
        console.log(user);
-        this.router.navigate(['/categorie'])
-     }else{
-       alert("errer")
-     }
+
+
      });
 
   }

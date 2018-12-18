@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
-.block1 , .block2 , .block3, .block4, .block5{
+.block11 , .block12 , .block13, .block14, .block15{
   height: 35vh;
   width: 45vh;
   background: rgba(192, 10 , 10, 1);
@@ -34,7 +34,7 @@ i.fa.fa-play-circle:hover{
     color:  rgba(235, 24, 1, 1);
 }
 
-.img1, .img2, .img3, .img4, .img5{
+.img11, .img12, .img13, .img14, .img15{
   width: 45vh;
   height: 27vh;
   background-size: contain;
@@ -42,23 +42,23 @@ i.fa.fa-play-circle:hover{
   border-radius: 2vh
 }
 
-.img1{
+.img11{
     background-image: url('../../assets/imageVideo/fessier1.png');
 }
 
-.img2{
+.img12{
     background-image: url('../../assets/imageVideo/fessier2.png');
 }
 
-.img3{
+.img13{
     background-image: url('../../assets/imageVideo/fessier3.png');
 }
 
-.img4{
+.img14{
     background-image: url('../../assets/imageVideo/fessier4.png');
 }
 
-.img5{
+.img15{
     background-image: url('../../assets/imageVideo/cardio4.png');
 }
 
@@ -128,7 +128,7 @@ line-height: 9vh;
     margin-left: -1vh;
   }
 
-  .block1 , .block2 , .block3, .block4, .block5{
+  .block11 , .block12 , .block13, .block14, .block15{
     height: 30vh;
     width: 35vh;
     background: rgba(192, 10 , 10, 1);
@@ -136,7 +136,7 @@ line-height: 9vh;
     border-radius: 2vh;
   }
 
-  .img1, .img2, .img3, .img4, .img5{
+  .img11, .img12, .img13, .img14, .img15{
     width: 35vh;
     height: 20vh;
 
@@ -152,7 +152,7 @@ line-height: 9vh;
 }
 
 @media screen and (max-width: 1280px) {
-  .block1 , .block2 , .block3, .block4, .block5{
+  .block11 , .block12 , .block13, .block14, .block15{
     height: 30vh;
     width: 35vh;
     background: rgba(192, 10 , 10, 1);
@@ -160,7 +160,7 @@ line-height: 9vh;
     border-radius: 2vh;
   }
 
-  .img1, .img2, .img3, .img4, .img5{
+  .img11, .img12, .img13, .img14, .img15{
     width: 35vh;
     height: 20vh;
 

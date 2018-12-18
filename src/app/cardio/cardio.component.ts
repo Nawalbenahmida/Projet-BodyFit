@@ -12,7 +12,9 @@ typeCardio: TypeVideo[]
   constructor(private typevideoService:  InfoVideoService) { }
 
 getCardio(){
-    this.typevideoService.getCardio().subscribe((typeCardio: TypeVideo[]) => this.typeCardio = typeCardio);
+    this.typevideoService.getCardio().subscribe(data => {
+          this.typeCardio = data;
+        });
 }
   ngOnInit() {
     this.getCardio();

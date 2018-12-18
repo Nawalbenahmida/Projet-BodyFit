@@ -34,7 +34,7 @@ i.fa.fa-play-circle:hover{
     color:  rgba(235, 24, 1, 1);
 }
 
-.img1, .img2, .img3, .img4, .img5{
+.img6, .img7, .img8, .img9, .img10{
   width: 45vh;
   height: 27vh;
   background-size: contain;
@@ -42,23 +42,23 @@ i.fa.fa-play-circle:hover{
   border-radius: 2vh
 }
 
-.img1{
+.img6{
     background-image: url('../../assets/imageVideo/cardio1.png');
 }
 
-.img2{
+.img7{
     background-image: url('../../assets/imageVideo/cardio2.png');
 }
 
-.img3{
+.img8{
     background-image: url('../../assets/imageVideo/cardio3.png');
 }
 
-.img4{
+.img9{
     background-image: url('../../assets/imageVideo/cardio4.png');
 }
 
-.img5{
+.img10{
     background-image: url('../../assets/imageVideo/abdo1.png');
 }
 
@@ -128,7 +128,7 @@ line-height: 9vh;
     margin-left: -1vh;
   }
 
-  .block1 , .block2 , .block3, .block4, .block5{
+  .block6 , .block7 , .block8, .block9, .block10{
     height: 30vh;
     width: 35vh;
     background: rgba(192, 10 , 10, 1);
@@ -136,7 +136,7 @@ line-height: 9vh;
     border-radius: 2vh;
   }
 
-  .img1, .img2, .img3, .img4, .img5{
+  .img6, .img7, .img8, .img9, .img10{
     width: 35vh;
     height: 20vh;
 
@@ -152,7 +152,7 @@ line-height: 9vh;
 }
 
 @media screen and (max-width: 1280px) {
-  .block1 , .block2 , .block3, .block4, .block5{
+  .block6 , .block7 , .block8, .block9, .block10{
     height: 30vh;
     width: 35vh;
     background: rgba(192, 10 , 10, 1);
@@ -160,7 +160,7 @@ line-height: 9vh;
     border-radius: 2vh;
   }
 
-  .img1, .img2, .img3, .img4, .img5{
+  .img6, .img7, .img8, .img9, .img10{
     width: 35vh;
     height: 20vh;
 

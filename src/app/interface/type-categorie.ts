@@ -1,5 +1,6 @@
 export interface TypeCategorie {
-  name: string;
-  class: string;
-  routing: string;
+  idCategory: Number;
+  nameCategory: string;
+  classCategory: string;
+  routingCategory: string;
 }

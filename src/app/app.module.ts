@@ -10,7 +10,7 @@ import {MessageModule} from 'primeng/message';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-import { MockCategorieService } from './services/mock-categorie.service';
+import { CategorieService } from './services/categorie.service';
 import { InfoVideoService } from './services/info-video.service';
 
 import { AppComponent } from './app.component';
@@ -21,7 +21,6 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { CategorieComponent } from './categorie/categorie.component';
 import { CardioComponent } from './cardio/cardio.component';
 import { FessierComponent } from './fessier/fessier.component';
-import { AllVComponent } from './all-v/all-v.component';
 import { AbdoComponent } from './abdo/abdo.component';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment.prod';
@@ -39,7 +38,6 @@ import { AuthService } from './services/auth.service';
     CategorieComponent,
     CardioComponent,
     FessierComponent,
-    AllVComponent,
     AbdoComponent,
 
   ],
@@ -60,7 +58,7 @@ import { AuthService } from './services/auth.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [MockCategorieService , InfoVideoService, AuthGuard, AuthService ],
+  providers: [CategorieService , InfoVideoService, AuthGuard, AuthService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -11,7 +11,9 @@ export class FessierComponent implements OnInit {
 typeFessier: TypeVideo[]
   constructor(private typevideoService:  InfoVideoService) { }
   getFessier(){
-      this.typevideoService.getFessier().subscribe((typeFessier: TypeVideo[]) => this.typeFessier = typeFessier);
+      this.typevideoService.getFessier().subscribe(data => {
+            this.typeFessier = data;
+          });
   }
   ngOnInit() {
     this.getFessier();
